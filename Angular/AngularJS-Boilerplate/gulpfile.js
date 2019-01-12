@@ -5,7 +5,7 @@ const gulp 			= require('gulp'),
 	  imagemin 		= require('gulp-imagemin'),
 	  webserver 	= require('gulp-webserver');
 	  rename	 	= require('gulp-rename');
-	  cssmin 		= require('gulp-cssmin'),
+      cssmin 		= require('gulp-cssmin'),
 	  browserSync 	= require('browser-sync').create();
 
 

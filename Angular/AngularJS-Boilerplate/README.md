@@ -1,3 +1,10 @@
+###Angular JS Tutorial
+
+YouTube channel link: https://www.youtube.com/playlist?list=PLQCmSnNFVYnTD5p2fR4EXmtlR6jQJMbPb
+
+Playlist: Tudo Sobre AngularJS (#1 à #17).
+
+
 ### Config
 -----
 

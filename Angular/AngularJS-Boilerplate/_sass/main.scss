@@ -1,3 +1,100 @@
 body{
     background: #f9f9f9;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+
+.container-fluid{
+    background-color: black;
+    height: 85px;
+    -webkit-box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.75);
+
+    h1{
+        color: white;
+        width: 500px;
+        position: relative;
+        margin: 0 auto 0 auto !important;
+        text-align: center;
+    }
+}
+
+.form-cadastro{
+    -webkit-box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.75);
+    background-color: bisque;
+    border-radius: .3rem;
+    position: relative !important;
+    top: 20px;
+    margin: 0px 10px 0 auto !important;
+    height: 500px;
+
+    .title{
+        text-align: center;
+        margin: 0 auto 0 auto !important;
+        position: relative;
+        top: 30px;
+    }
+
+    .display-4{
+        font-size: 42px;
+        font-weight: bold;
+    }
+
+    .form{
+        position: relative;
+        top: 80px;
+    }
+
+    .form-title{
+        padding: 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .form-control{
+        margin-bottom: 20px;
+    }
+}
+
+.jumbotron{
+    -webkit-box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 12px -1px rgba(0,0,0,0.75);
+    margin: 20px 15px 0 auto !important;
+    width: 700px;
+
+    .title{
+        text-align: center;
+        margin: 0 auto 0 auto !important;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .display-4{
+        font-size: 42px;
+        font-weight: bold;
+    }
+
+    .table th{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .table td{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .selecionado{
+        background-color: goldenrod;
+    }
+
+    .branco{
+        color: white;
+    }
 }

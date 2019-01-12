@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <h1 class="display-4">{{appName}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="form-cadastro col-sm">    
+            <div class="title display-4">{{titleForm}}
+            <img src="../lib/icons/round-assignment-24px.svg" width="40px" height="40px">
+            </div>
+            <form class="form">
+                <span class="form-title">Nome:</span>
+                <input type="text" class="form-control" ng-model="contato.nome" placeholder="Nome">
+                <span class="form-title">Telefone:</span>
+                <input type="text" class="form-control" ng-model="contato.telefone" placeholder="Telefone">
+                <span class="form-title">Operadora:</span>
+                <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome group by operadora.categoria for operadora in operadoras">
+                    <option value="">Selecione uma Operadora</option>
+                </select>
+                <br>
+                <button class="btn btn-primary" ng-click="adicionarContato(contato)" ng-disabled="!contato.nome || !contato.telefone || !contato.operadora.nome">{{titleAddButton}}</button>
+            </form>
+        </div>
+        <div class="jumbotron col-sm">
+            <div class="title display-4">{{titleContatos}}
+                <img src="../lib/icons/round-account_circle-24px.svg" width="40px" height="40px">
+            </div>
+            <table class="table">
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Operadora</th>
+                </tr>
+                <tr ng-class="{selecionado: contato.selecionado, branco: contato.selecionado}" ng-repeat="contato in contatos">
+                    <td><input type="checkbox" class="form-check-input" ng-model="contato.selecionado"></td>
+                    <td>{{contato.nome}}</td>
+                    <td>{{contato.telefone}}</td>
+                    <td>{{contato.operadora.nome}}</td>
+                </tr>
+            </table>
+            <button class="btn btn-danger" ng-click="excluirContato(contatos)">{{titleDelButton}}</button>
+        </div>
+    </div>
+</div>
