@@ -25,7 +25,7 @@
             <div class="title display-4">{{titleContatos}}
                 <img src="../lib/icons/round-account_circle-24px.svg" width="40px" height="40px">
             </div>
-            <table class="table">
+            <table ng-show="contatos.length > 0" class="table">
                 <tr>
                     <th>Nome</th>
                     <th>Telefone</th>
@@ -36,9 +36,10 @@
                     <td>{{contato.nome}}</td>
                     <td>{{contato.telefone}}</td>
                     <td>{{contato.operadora.nome}}</td>
+                    <td><div style="width: 20px; height: 20px;" ng-style="{'background-color': contato.cor}"></div></td>
                 </tr>
             </table>
-            <button class="btn btn-danger" ng-click="excluirContato(contatos)">{{titleDelButton}}</button>
+            <button class="btn btn-danger" ng-click="excluirContato(contatos)" ng-show="isContatoSelecionado(contatos)">{{titleDelButton}}</button>
         </div>
     </div>
 </div>
