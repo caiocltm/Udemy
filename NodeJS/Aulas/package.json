@@ -1,0 +1,25 @@
+{
+  "name": "aulas_node",
+  "version": "1.0.0",
+  "description": "Aulas do Udemy para aprendizado de NodeJS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Udemy"
+  },
+  "keywords": [
+    "NodeJS",
+    "Udemy"
+  ],
+  "author": "CaioCLTM",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.7"
+  }
+}
