@@ -1,0 +1,22 @@
+{
+  "name": "nodejs_course",
+  "version": "1.0.0",
+  "description": "NodeJS course project boilerplate.",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Caaio",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "pug": "^2.0.4"
+  }
+}
