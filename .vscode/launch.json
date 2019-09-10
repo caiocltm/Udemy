@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "nodemon",
             "runtimeExecutable": "nodemon",
-            "program": "${workspaceFolder}\\JavaScript\\NodeJS\\NodeJS_Complete_Guide\\Seção_4\\app.js",
+            "program": "${workspaceFolder}\\JavaScript\\NodeJS\\NodeJS_Complete_Guide\\Seção_7\\app.js",
             "restart": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
