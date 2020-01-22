@@ -1,0 +1,9 @@
+{
+    "env": {
+        "PORT": 3000,
+        "MONGO_URL": "127.0.0.1:27017",
+        "MONGO_DATABASE": "shop",
+        "SESSION_SECRET_KEY": "ASoasnS2@#$@#twdefDWqcQW65D1WQEDW54Ed4WEr5tY%%#$#@$R236R5325R42533",
+        "STRIPE_KEY": "sk_test_Flc1Upp19T0q8ZgmKGDVJUI400j9emUSTr"
+    }
+}
