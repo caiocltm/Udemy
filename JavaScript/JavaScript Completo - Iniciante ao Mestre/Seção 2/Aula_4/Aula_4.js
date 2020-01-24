@@ -1,2 +1,0 @@
-// Sistema Léxico I (JavaScript)
-
