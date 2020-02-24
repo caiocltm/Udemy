@@ -2,8 +2,8 @@ const nodeServer = require('express')();
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-// MongoDB Models
-const Post = require('./models/posts.model');
+// Posts Routes
+const PostRoutes = require('./routes/posts');
 
 nodeServer.use(bodyParser.json());
 nodeServer.use(bodyParser.urlencoded({ extended: false }));
@@ -16,32 +16,28 @@ nodeServer.use((req, res, next) => {
     );
     res.setHeader(
         "Access-Control-Allow-Methods", 
-        "GET, POST, PATCH, DELETE, OPTIONS"
+        "GET, POST, PATCH, PUT, DELETE, OPTIONS"
     );
+    if (req.method === 'OPTIONS') {
+        res.header({
+            'Access-Contol-Allow-Methods': 'POST, PATCH, DELETE, GET, PUT'
+        });
+        return res.status(200).json({});
+    }
     next();
 });
 
-nodeServer.post('/api/posts', async (req, res, next) => {
-    const post = new Post({
-        title: req.body.title,
-        content: req.body.content
-    });
-    await post.save();
-    res.status(201).json({
-        message: 'Post added succesfully!'
-    });
-});
+// Posts routes middleware
+nodeServer.use('/api/posts', PostRoutes);
 
-nodeServer.get('/api/posts', async (req, res, next) => {
-    const posts = await Post.find();
-    res.status(200).json({
-        message: 'Posts fetched successfully!',
-        posts
-    });
-});
-
-mongoose.connect('mongodb://127.0.0.1:27017/node-angular', 
-(err) => err && (console.log('MongoDB Server error: ', err)))
+mongoose.connect(
+    'mongodb://127.0.0.1:27017/node-angular', //Host
+    { // Options
+        useUnifiedTopology: true,
+        useNewUrlParser: true
+    },
+    (err) => err && (console.log('MongoDB Server error: ', err)) // Callback error.
+)
 .then(_ => console.log('MongoDB Server is running!'))
 .catch(error => console.log('MongoDB Server connection error: ', error));
 
